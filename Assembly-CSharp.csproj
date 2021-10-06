@@ -104,6 +104,7 @@
     <Compile Include="Assets\Dreamteck\Splines\Examples\Junctions\Scripts\Wagon.cs" />
     <Compile Include="Assets\Dreamteck\Splines\Components\ObjectBender.cs" />
     <Compile Include="Assets\Dreamteck\Splines\Core\ObjectSequence.cs" />
+    <Compile Include="Assets\FarlandSkies\Demo\Scripts\Skybox\SkyboxChanger.cs" />
     <Compile Include="Assets\Dreamteck\Splines\Core\Primitives\Ellipse.cs" />
     <Compile Include="Assets\Dreamteck\Splines\Core\TransformModule.cs" />
     <Compile Include="Assets\Dreamteck\Splines\Examples\Junctions\Scripts\TrainCamera.cs" />
@@ -116,23 +117,23 @@
     <Compile Include="Assets\Dreamteck\Splines\Core\Spline.cs" />
     <Compile Include="Assets\Dreamteck\Splines\Core\Primitives\Star.cs" />
     <Compile Include="Assets\Dreamteck\Splines\Components\EdgeColliderGenerator.cs" />
+    <Compile Include="Assets\FarlandSkies\Demo\Scripts\Player\FPSWalkerEnhanced.cs" />
     <Compile Include="Assets\Dreamteck\Splines\Core\SplineSample.cs" />
     <Compile Include="Assets\Dreamteck\Splines\Components\SplineProjector.cs" />
     <Compile Include="Assets\Dreamteck\Splines\Components\Sample Modifiers\MeshScaleModifier.cs" />
     <Compile Include="Assets\Dreamteck\Splines\Components\TubeGenerator.cs" />
+    <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Dreamteck\Splines\Components\MeshGenerator.cs" />
     <Compile Include="Assets\Dreamteck\Utilities\ArrayUtility.cs" />
     <Compile Include="Assets\Dreamteck\Splines\Components\BlankUser.cs" />
     <Compile Include="Assets\Dreamteck\Splines\Core\SplineTrigger.cs" />
+    <Compile Include="Assets\FarlandSkies\Demo\Scripts\Skybox\SkyboxRotator.cs" />
+    <Compile Include="Assets\FarlandSkies\Demo\Scripts\Player\SmoothMouseLook.cs" />
     <Compile Include="Assets\Dreamteck\Splines\Core\Primitives\Line.cs" />
     <Compile Include="Assets\Dreamteck\Utilities\TransformUtility.cs" />
     <Compile Include="Assets\Dreamteck\Splines\Components\PolygonColliderGenerator.cs" />
     <Compile Include="Assets\Dreamteck\Splines\Components\Sample Modifiers\SizeModifier.cs" />
-    <Compile Include="Assets\FarlandSkies\Demo\Scripts\Skybox\SkyboxChanger.cs" />
-    <Compile Include="Assets\FarlandSkies\Demo\Scripts\Player\FPSWalkerEnhanced.cs" />
-    <Compile Include="Assets\FarlandSkies\Demo\Scripts\Skybox\SkyboxRotator.cs" />
-    <Compile Include="Assets\FarlandSkies\Demo\Scripts\Player\SmoothMouseLook.cs" />
-    <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Scripts\PlayerCatch.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Kevin Iglesias\3DCharacterDummy\Readme.txt" />
