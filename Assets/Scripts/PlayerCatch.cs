@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerCatch : MonoBehaviour
 {
-    Transform parentPickup;
+    private static int peopleCount = 0;
+    private Vector3 newPos;
     [SerializeField] Transform stackPosition;
 
     // Start is called before the first frame update
@@ -21,22 +22,29 @@ public class PlayerCatch : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Pickup")
+        if(other.gameObject.CompareTag("Pickup"))
         {
-            Transform otherTransform = other.transform.parent;
 
-            if(parentPickup == null)
-            {
-                parentPickup = otherTransform;
-                parentPickup.position = stackPosition.position;
-                parentPickup.parent = stackPosition;
-            }
-            else
-            {
-                parentPickup.position += Vector3.up * (otherTransform.localScale.y);
-                otherTransform.position = stackPosition.position;
-                otherTransform.parent = stackPosition;
-            }
+            Transform parent = other.transform;
+            Transform child = parent.Find("Dummy").gameObject.transform;
+
+
+            stackPosition.localPosition = newPos;
+
+            child.SetParent(stackPosition);
+            child.localPosition = new Vector3(newPos.x, -1.5f, newPos.z);
+            child.localRotation = Quaternion.identity;
+            child.localScale = new Vector3(1.25f, 1.25f, 1.25f);
+
+
+
+            newPos = stackPosition.localPosition;
+            newPos.y = 0f;
+            newPos.x = 0;
+            newPos.z -= 0.5f;
+
+
+            
         }
     }
 }

@@ -5,9 +5,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public float speed = 1.0f;
+    public float horizontalSpeed = 1.0f;
     public float xLimit = 1.0f;
-    public float yLimit = 1.0f;
     private float gForce = 0.0f;
     public float downwardForce = 0.1f;
     public float jumpForce = 2.0f;
@@ -27,21 +26,21 @@ public class Player : MonoBehaviour
     private void ApplyForce()
     {
         float xInput = Input.GetAxis("Horizontal");
-        if (onGround)
+        if (onGround) // If you want to be able to move in mid-air as well, simply remove this if condition.
         {
             if(Mathf.Abs(transform.localPosition.x) < xLimit)
             {
-                transform.localPosition += new Vector3(xInput * speed, 0, 0);
+                transform.localPosition += new Vector3(xInput * horizontalSpeed, 0, 0);
             }
 
             if (xInput < 0 && transform.localPosition.x > 0)
             {
-                transform.localPosition += new Vector3(xInput * speed, 0, 0);
+                transform.localPosition += new Vector3(xInput * horizontalSpeed, 0, 0);
             }
 
             if (xInput > 0 && transform.localPosition.x < 0)
             {
-                transform.localPosition += new Vector3(xInput * speed, 0, 0);
+                transform.localPosition += new Vector3(xInput * horizontalSpeed, 0, 0);
             }
         }
     }
